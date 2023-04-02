@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:id="@+id/hearts"
+       android:layout_width="140dp"
+       android:layout_height="40dp"
+       android:layout_marginEnd="10dp"
+       android:layout_marginTop="10dp"
+       android:layout_alignParentEnd="true"
+       >
+       <com.google.android.material.imageview.ShapeableImageView
+           android:id="@+id/main_IMG_heart1"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           app:srcCompat="@drawable/ic_icon_heart" />
+
+       <com.google.android.material.imageview.ShapeableImageView
+           android:id="@+id/main_IMG_heart2"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_marginHorizontal="10dp"
+           android:layout_weight="1"
+           app:srcCompat="@drawable/ic_icon_heart" />
+
+       <com.google.android.material.imageview.ShapeableImageView
+           android:id="@+id/main_IMG_heart3"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           app:srcCompat="@drawable/ic_icon_heart" />
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentBottom="true"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/green_car"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:rotation="270"
+            android:visibility="visible"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:srcCompat="@drawable/brighgreen_car"
+        ></com.google.android.material.imageview.ShapeableImageView>
+    </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            app:fabSize="normal"
+            android:src="@drawable/baseline_keyboard_arrow_right_24"
+            >
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        app:fabSize="normal"
+        android:src="@drawable/baseline_keyboard_arrow_left_24"
+        >
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+</RelativeLayout>
