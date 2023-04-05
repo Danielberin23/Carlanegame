@@ -58,8 +58,8 @@
 
             android:layout_weight="1"
             android:rotation="270"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
+            android:scaleX="0.8"
+            android:scaleY="0.9"
             android:visibility="invisible"
             app:srcCompat="@drawable/brighgreen_car" />
 
@@ -71,8 +71,8 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:rotation="270"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
+            android:scaleX="0.8"
+            android:scaleY="0.9"
             android:visibility="visible"
             app:srcCompat="@drawable/brighgreen_car" />
 
@@ -84,8 +84,8 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:rotation="270"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
+            android:scaleX="0.8"
+            android:scaleY="0.9"
             android:visibility="invisible"
             app:srcCompat="@drawable/brighgreen_car" />
     </LinearLayout>
@@ -101,22 +101,25 @@
             android:src="@drawable/baseline_keyboard_arrow_right_24"
             >
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/main_Left_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        app:fabSize="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:src="@drawable/baseline_keyboard_arrow_left_24"
-        tools:ignore="ContentDescription">
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        app:fabSize="normal"
+        tools:ignore="ContentDescription"></com.google.android.material.floatingactionbutton.FloatingActionButton>
     <LinearLayout
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:layout_marginStart="25dp"
-        android:layout_marginright="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="200dp">
         <com.google.android.material.imageview.ShapeableImageView
@@ -132,7 +135,7 @@
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:layout_marginStart="150dp"
-        android:layout_marginright="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="200dp">
         <com.google.android.material.imageview.ShapeableImageView
@@ -147,7 +150,7 @@
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:layout_marginStart="275dp"
-        android:layout_marginright="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="200dp">
         <com.google.android.material.imageview.ShapeableImageView
