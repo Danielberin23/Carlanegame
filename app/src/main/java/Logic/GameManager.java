@@ -4,23 +4,26 @@ import java.util.Random;
 
 public class GameManager {
     private int numOfLives;
-
     private int[] arrOfLives;
     private final int numRows;
     private final int numCol;
+
+
+
     private int[] arrOfCar;
+
+
 
     private int[][] matOfObstacle;
     private int car_Position;
     private boolean isCrash = false;
-
     private boolean isFinish = false;
 
     public GameManager (int numOfLives , int numRows , int numCol){
         this.numOfLives = numOfLives;
         this.numCol=numCol;
         this.numRows=numRows;
-        initItems();
+
     }
 
     public void moveCar(String direction){
@@ -75,6 +78,8 @@ public class GameManager {
     }
     private void addNewObstacle() {
         int randomCol = new Random().nextInt(numCol);
+        while(matOfObstacle[0][randomCol]==1)
+            randomCol=new Random().nextInt(numCol);
 
 
         for (int i = 0; i < numCol; i++) {
@@ -121,6 +126,9 @@ public class GameManager {
     public int getNumOfLives() {
         return numOfLives;
     }
+    public int[] getLives() {
+        return arrOfLives;
+    }
 
     public void setNumOfLives(int numOfLives) {
         this.numOfLives = numOfLives;
@@ -128,6 +136,9 @@ public class GameManager {
 
     public int getCar_Position() {
         return car_Position;
+    }
+    public boolean isGameFinish() {
+        return isFinish;
     }
 
     public void setCar_Position(int car_Position) {
@@ -140,6 +151,20 @@ public class GameManager {
 
     public void setCrash(boolean crash) {
         isCrash = crash;
+    }
+    public int[] getArrOfCar() {
+        return arrOfCar;
+    }
+
+    public void setArrOfCar(int[] arrOfCar) {
+        this.arrOfCar = arrOfCar;
+    }
+    public int[][] getMatOfObstacle() {
+        return matOfObstacle;
+    }
+
+    public void setMatOfObstacle(int[][] matOfObstacle) {
+        this.matOfObstacle = matOfObstacle;
     }
 
 }

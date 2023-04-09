@@ -90,17 +90,24 @@
             app:srcCompat="@drawable/brighgreen_car" />
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/main_Right_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
 
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/baseline_keyboard_arrow_right_24"
-            >
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_Right_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/baseline_keyboard_arrow_right_24"
+        android:contentDescription="right"
+        tools:ignore="HardcodedText,RelativeOverlap,RtlHardcoded">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/main_Left_button"
@@ -108,58 +115,151 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/baseline_keyboard_arrow_left_24"
         app:fabSize="normal"
-        tools:ignore="ContentDescription"></com.google.android.material.floatingactionbutton.FloatingActionButton>
-    <LinearLayout
+        android:contentDescription="left"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp">
+    <com.google.android.material.imageview.ShapeableImageView
         android:layout_width="100dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="25dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="200dp">
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/barrier"
+        android:layout_weight="1"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/barrier"
+        android:layout_weight="1"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/barrier"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/barrier_left"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
-            android:visibility="invisible"
-            />
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
 
     </LinearLayout>
     <LinearLayout
-        android:layout_width="100dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="150dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="200dp">
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/barrier_center"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
-            android:visibility="invisible"
-            />
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
+
     </LinearLayout>
     <LinearLayout
-        android:layout_width="100dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="275dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="200dp">
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/barrier_right"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
-            android:visibility="invisible"
-            />
-    </LinearLayout>
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="410dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 </RelativeLayout>
