@@ -17,6 +17,9 @@ public class GameManager {
     private int[][] matOfObstacle;
     private int car_Position;
     private boolean isCrash = false;
+
+
+
     private boolean isFinish = false;
 
     public GameManager (int numOfLives , int numRows , int numCol){
@@ -78,10 +81,7 @@ public class GameManager {
     }
     private void addNewObstacle() {
         int randomCol = new Random().nextInt(numCol);
-        while(matOfObstacle[0][randomCol]==1)
-            randomCol=new Random().nextInt(numCol);
-
-
+        
         for (int i = 0; i < numCol; i++) {
             if(randomCol == i) {
                 matOfObstacle[0][i] = 1;
@@ -110,11 +110,6 @@ public class GameManager {
                         if(numOfLives == 0){
                             isFinish = true;
                         }
-                    }
-                }
-                if( i == numRows - 1 && matOfObstacle[i][j] == 2){
-                    matOfObstacle[i][j] = 0;
-                    if(j == car_Position){
                     }
                 }
                 else if(i != numRows - 1){
@@ -165,6 +160,13 @@ public class GameManager {
 
     public void setMatOfObstacle(int[][] matOfObstacle) {
         this.matOfObstacle = matOfObstacle;
+    }
+    public boolean isFinish() {
+        return isFinish;
+    }
+
+    public void setFinish(boolean finish) {
+        isFinish = finish;
     }
 
 }
