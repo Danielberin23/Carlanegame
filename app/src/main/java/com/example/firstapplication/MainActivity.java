@@ -60,18 +60,15 @@ public class MainActivity extends AppCompatActivity {
         }, DELAY, DELAY);
     }
     private void updateUI() {
-        gameManager.updateBoard();
+
         boolean isFinish = gameManager.isGameFinish();
 
         if (isFinish) {
-            showToast("Game Over");
-            makeVibrate();
+            //Game Over!
+            gameManager.updateBoard();
             gameManager.setNumOfLives(3);//return to full life
             gameManager.initItems();// restart board
             gameManager.setFinish(false);//restart game
-
-
-
         } else {
             boolean isCrashed = gameManager.isCrash();
             if (isCrashed) {
