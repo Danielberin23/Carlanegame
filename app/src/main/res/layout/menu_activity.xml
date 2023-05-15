@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_game"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="Car Lane game"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold">
+
+    </TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:text="Choose Game Mode"
+                android:textAlignment="center"
+                android:textColor="@color/purple_500"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rBtnModeOption"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/txtModeTitle"
+                android:layout_gravity="center"
+                android:checkedButton="@id/main_BTN_sensor">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/main_BTN_sensor"
+                    style="@style/CardView.Light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:text="Sensor Mode"
+                    android:textColor="@color/light_blue"
+                    android:textSize="25sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/main_BTN_button"
+                    style="@style/CardView.Light"
+                    android:backgroundTint="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/main_BTN_sensor"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+
+
+                    android:text="Button Mode"
+                    android:textColor="@color/light_blue"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/main_btn_start"
+        style="@style/CardView.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="Start Game"
+        android:textSize="28sp"
+        android:textColor="@android:color/white"
+        />
+
+    <Button
+        android:id="@+id/main_btn_score"
+        style="@style/CardView.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="LeaderBoard"
+        android:textSize="28sp"
+        android:textColor="@android:color/white"
+        />
+</LinearLayout>

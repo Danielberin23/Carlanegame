@@ -1,11 +1,7 @@
 package com.example.firstapplication;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
 import android.view.View;
 import android.widget.Toast;
 
@@ -60,11 +56,13 @@ public class MainActivity extends AppCompatActivity {
         }, DELAY, DELAY);
     }
     private void updateUI() {
-
+        gameManager.updateBoard();
         boolean isFinish = gameManager.isGameFinish();
 
         if (isFinish) {
             //Game Over!
+            SignalGenerator.getInstance().toast("Game Over",Toast.LENGTH_SHORT);
+            SignalGenerator.getInstance().vibrate(500);
             gameManager.updateBoard();
             gameManager.setNumOfLives(3);//return to full life
             gameManager.initItems();// restart board
@@ -73,11 +71,12 @@ public class MainActivity extends AppCompatActivity {
             boolean isCrashed = gameManager.isCrash();
             if (isCrashed) {
                 showLives();
-                showToast("!Lost Life!");
+                SignalGenerator.getInstance().toast("Lost life!",Toast.LENGTH_SHORT);
+                SignalGenerator.getInstance().vibrate(500);
                 gameManager.setCrash(false);
-                makeVibrate();
             }
         }
+
         showObstacles();
     }
 
@@ -97,16 +96,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("ObsoleteSdkInt")
-    private void makeVibrate(){
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        // Vibrate for 500 milliseconds
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            v.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
-        } else {
-            //deprecated in API 26
-            v.vibrate(500);
-        }
-    }
+
     private void setArrowKeyClickListeners(){
 
         main_Action_Buttons[0].setOnClickListener(v->clickedActionLeft());//left button car
@@ -127,10 +117,7 @@ public class MainActivity extends AppCompatActivity {
         showCar();
 
     }
-    private void showToast(String string) {
-        Toast.makeText(this, string, Toast.LENGTH_SHORT).show();
 
-    }
     private void showLives() {
         int[] managerLives = gameManager.getLives();
         for (int i = 0; i < gameManager.getLives().length; i++) {
