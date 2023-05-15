@@ -13,6 +13,8 @@ import com.google.android.material.textview.MaterialTextView;
 
 public class FragmentList extends Fragment {
 
+
+
     private MaterialTextView list_LBL_title;
     private ListView fragmentList;
 
@@ -32,4 +34,18 @@ public class FragmentList extends Fragment {
         fragmentList = view.findViewById(R.id.fragmentList);
     }
 
+    public ListView getFragmentList() {
+        return fragmentList;
+    }
+
+    public void setFragmentList(ListView fragmentList) {
+        this.fragmentList = fragmentList;
+    }
+    public MaterialTextView getList_LBL_title() {
+        return list_LBL_title;
+    }
+
+    public void setList_LBL_title(MaterialTextView list_LBL_title) {
+        this.list_LBL_title = list_LBL_title;
+    }
 }

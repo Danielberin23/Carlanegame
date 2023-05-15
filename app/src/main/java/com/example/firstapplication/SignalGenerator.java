@@ -1,5 +1,6 @@
 package com.example.firstapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import android.os.VibrationEffect;
@@ -8,6 +9,7 @@ import android.widget.Toast;
 
 public class SignalGenerator {
 
+    @SuppressLint("StaticFieldLeak")
     private static SignalGenerator instance;
     private Context context;
     private static Vibrator vibrator;
@@ -33,9 +35,10 @@ public class SignalGenerator {
                 .show();
     }
 
+    @SuppressLint("ObsoleteSdkInt")
     public void vibrate(long length){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.EFFECT_TICK));
+            vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
         } else {
             //deprecated in API 26
             vibrator.vibrate(500);

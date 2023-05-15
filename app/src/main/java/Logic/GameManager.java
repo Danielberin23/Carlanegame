@@ -1,9 +1,5 @@
 package Logic;
 
-import android.os.Build;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
-
 import java.util.Random;
 
 public class GameManager {
@@ -33,31 +29,28 @@ public class GameManager {
 
     }
 
-    public void moveCar(String direction){
-        int nextColumn;
-
-        if(direction.equals("left")){
-            nextColumn = car_Position -1;
-            if(nextColumn >= 0){
-                arrOfCar[car_Position] = 0;
-                arrOfCar[nextColumn] = 1;
-                car_Position = nextColumn;
-            }
+    public void moveCar(boolean answer, int place)
+    {
+        if(place != 0 && place !=4)
+        {
+            if(answer == true)
+                setCar_Position(place - 1);
+            else setCar_Position(place+1);
         }
-
-        if(direction.equals("right")){
-            nextColumn = car_Position +1;
-            if(nextColumn  < numCol){
-                arrOfCar[car_Position] = 0;
-                arrOfCar[nextColumn] = 1;
-                car_Position = nextColumn;
-            }
+        else if(place == 0 && answer == false)
+        {
+            setCar_Position(1);
         }
-
+        else if(place == 4 && answer == true)
+        {
+            setCar_Position(3);
+        }
+        else setCar_Position(place);
     }
+
+
     public void initItems() {
         initLives();
-        initObstacles();
         initCars();
     }
 
@@ -66,35 +59,10 @@ public class GameManager {
         for(int i=0; i<numCol; i++){
             arrOfCar[i]=0;
         }
-        car_Position=1;
-        arrOfCar[1]=car_Position;
+        car_Position=2;
+        arrOfCar[car_Position]=1;
     }
 
-    private void initObstacles() {
-        matOfObstacle = new int[numRows][numCol];
-
-        for(int i=0; i< numRows; i++){
-            for (int j=0; j<numCol;j++){
-                matOfObstacle[i][j] = 0;
-            }
-        }
-    }
-    public void updateBoard() {
-        updateObstacles();
-        addNewObstacle();
-    }
-    private void addNewObstacle() {
-        int randomCol = new Random().nextInt(numCol);
-        
-        for (int i = 0; i < numCol; i++) {
-            if(randomCol == i) {
-                matOfObstacle[0][i] = 1;
-            }
-            else{
-                matOfObstacle[0][i] = 0;
-            }
-        }
-    }
 
     private void initLives() {
         arrOfLives = new int[numOfLives];
@@ -102,25 +70,32 @@ public class GameManager {
             arrOfLives[i] = 1;
         }
     }
-    private void updateObstacles() {
-        for (int i = numRows - 1; i >= 0 ; i--) {
-            for (int j = 0; j < numCol; j++) {
-                if( i == numRows - 1 && matOfObstacle[i][j] == 1){
-                    matOfObstacle[i][j] = 0;
-                    if(j == car_Position){
-                        isCrash = true;
-                        numOfLives = numOfLives -1;
-                        arrOfLives[numOfLives] = 0;
-                        if(numOfLives == 0){
-                            isFinish = true;
-                        }
-                    }
-                }
-                else if(i != numRows - 1){
-                    matOfObstacle[i+1][j]=matOfObstacle[i][j];
-                }
-            }
+    public int checkCoins (int coinPlace)
+    {
+        if(car_Position == coinPlace)
+        {
+            return 10;
         }
+        return 0;
+    }
+    public int checkAccident(int ObstaclePlace)
+    {
+        if(car_Position == ObstaclePlace)
+        {
+            return 1;
+        }
+        return 0;
+    }
+    public void setActiveObstacles(int row, int col, int num){
+        this.matOfObstacle[row][col] = num;
+    }
+    public void getNewObstacle(){
+        setActiveObstacles(0, new Random().nextInt(numCol), 1);
+    }
+
+    public void getNewCoin(){
+
+        setActiveObstacles(0, new Random().nextInt(numCol), 2);
     }
     public int getNumOfLives() {
         return numOfLives;
