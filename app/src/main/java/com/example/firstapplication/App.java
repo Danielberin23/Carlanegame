@@ -8,6 +8,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
+        MySPV3.init(this);
         SignalGenerator.init(this);
     }
 }

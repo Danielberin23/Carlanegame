@@ -6,7 +6,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.imageview.ShapeableImageView;
 
@@ -17,6 +19,7 @@ import Logic.GameManager;
 
 public class MainActivity extends AppCompatActivity {
 
+    private AppCompatImageView main_IMG_background;
     private FloatingActionButton[]  main_Action_Buttons;
     private ShapeableImageView[] main_IMG_hearts;
     private ShapeableImageView[] main_Car_green;
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Timer timer;
     private final int numOfLives = 3;
     private final int numRows = 6;
-    private final int numCol =3;
+    private final int numCol =5;
     private static final int DELAY = 700;
 
 
@@ -34,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViews();
+        Glide
+                .with(this)
+                .load("https://opengameart.org/sites/default/files/background-1_0.png")
+//                .load(R.drawable.australia)
+                .centerCrop()
+                .placeholder(R.drawable.ic_launcher_background)
+                .into(main_IMG_background);
         setArrowKeyClickListeners();
         gameManager = new GameManager(numOfLives, numRows, numCol);
         gameManager.initItems();
@@ -140,9 +150,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void findViews() {
+
+        main_IMG_background= findViewById(R.id.main_IMG_background);
         main_Car_green= new ShapeableImageView[]{
                 findViewById(R.id.green_car_left),
+                findViewById(R.id.green_car_centerL),
                 findViewById(R.id.green_car_center),
+                findViewById(R.id.green_car_centerR),
                 findViewById(R.id.green_car_right)};
         main_IMG_hearts = new ShapeableImageView[]{
                 findViewById(R.id.main_IMG_heart1),
@@ -158,27 +172,41 @@ public class MainActivity extends AppCompatActivity {
         main_Obstacles_lane = new ShapeableImageView[][]{
                 {findViewById(R.id.main_IMG_Barrier_11),
                         findViewById(R.id.main_IMG_Barrier_21),
-                        findViewById(R.id.main_IMG_Barrier_31),}
+                        findViewById(R.id.main_IMG_Barrier_31),
+                        findViewById(R.id.main_IMG_Barrier_41),
+                        findViewById(R.id.main_IMG_Barrier_51)}
                 ,
                 {findViewById(R.id.main_IMG_Barrier_12),
                         findViewById(R.id.main_IMG_Barrier_22),
                         findViewById(R.id.main_IMG_Barrier_32),
+                        findViewById(R.id.main_IMG_Barrier_42),
+                        findViewById(R.id.main_IMG_Barrier_52),
                 },
                 {findViewById(R.id.main_IMG_Barrier_13),
                         findViewById(R.id.main_IMG_Barrier_23),
-                        findViewById(R.id.main_IMG_Barrier_33),},
+                        findViewById(R.id.main_IMG_Barrier_33),
+                        findViewById(R.id.main_IMG_Barrier_43),
+                        findViewById(R.id.main_IMG_Barrier_53),
+                }
+                ,
 
                 {findViewById(R.id.main_IMG_Barrier_14),
                         findViewById(R.id.main_IMG_Barrier_24),
                         findViewById(R.id.main_IMG_Barrier_34),
+                        findViewById(R.id.main_IMG_Barrier_44),
+                        findViewById(R.id.main_IMG_Barrier_54),
                         },
                 {findViewById(R.id.main_IMG_Barrier_15),
                         findViewById(R.id.main_IMG_Barrier_25),
                         findViewById(R.id.main_IMG_Barrier_35),
+                        findViewById(R.id.main_IMG_Barrier_45),
+                        findViewById(R.id.main_IMG_Barrier_55),
                        },
                 {findViewById(R.id.main_IMG_Barrier_16),
                         findViewById(R.id.main_IMG_Barrier_26),
                         findViewById(R.id.main_IMG_Barrier_36),
+                        findViewById(R.id.main_IMG_Barrier_46),
+                        findViewById(R.id.main_IMG_Barrier_56),
                 }
         };
     }
