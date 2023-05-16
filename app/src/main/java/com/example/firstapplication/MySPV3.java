@@ -1,49 +1,51 @@
 package com.example.firstapplication;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class MySPV3
-{
-
-    private static final String DB_FILE = "DB_FILE";
+public class MySPV3 {
 
 
-    private static MySPV3 mySPV3 = null;
-    private SharedPreferences preferences;
+    public static class MySPv3 {
 
-    public static MySPV3 getInstance() {
-        return mySPV3;
-    }
+        private static final String DB_FILE = "DB_FILE";
 
-    public static void init(Context context) {
-        if (mySPV3 == null) {
-            mySPV3 = new MySPV3(context);
+        private static MySPv3 instance = null;
+        private SharedPreferences sharedPreferences;
+
+        private MySPv3(Context context) {
+            sharedPreferences = context.getSharedPreferences(DB_FILE, Context.MODE_PRIVATE);
         }
+
+        public static void init(Context context) {
+            if (instance == null) {
+                instance = new MySPv3(context);
+            }
+        }
+
+        public static MySPv3 getInstance() {
+            return instance;
+        }
+
+        public String getString(String key, String defValue) {
+            return sharedPreferences.getString(key, defValue);
+        }
+
+        public void putString(String key, String value) {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(key, value);
+            editor.apply();
+        }
+
+        public int getInt(String key, int defValue) {
+            return sharedPreferences.getInt(key, defValue);
+        }
+
+        public void putInt(String key, int value) {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt(key, value);
+            editor.apply();
+        }
+
     }
-
-    private MySPV3(Context context) {
-
-        preferences = context.getSharedPreferences(DB_FILE, Context.MODE_PRIVATE);
-    }
-
-    public void putInt(String key, int value) {
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putInt(key, value);
-        editor.apply();
-    }
-
-    public int getInt(String key, int def) {
-        return preferences.getInt(key, def);
-    }
-
-    public void putString(String key, String value) {
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(key, value);
-        editor.apply();
-    }
-
-    public String getString(String key, String def) {
-        return preferences.getString(key, def);
-    }
-
 }

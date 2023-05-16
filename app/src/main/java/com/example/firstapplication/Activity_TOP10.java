@@ -1,0 +1,46 @@
+package com.example.firstapplication;
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class Activity_TOP10 extends AppCompatActivity  {
+    private ScoresFragment fragmentScore;
+    private fragment_map fragmentMap;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_top_10);
+        GameUtils.hideSystemUI(this);
+        fragmentScore = new ScoresFragment();
+        fragmentScore.setActivity(this);
+        fragmentScore.setCallBackList(callBack_list);
+
+        getSupportFragmentManager().beginTransaction().add(R.id.frameScores, fragmentScore)
+                .commit();
+        fragmentMap = new fragment_map();
+        getSupportFragmentManager().beginTransaction().add(R.id.frameMap, fragmentMap).commit();
+
+
+
+    }
+    CallBack_List callBack_list = new CallBack_List() {
+        @Override
+        public void zoom(double lat, double lon) {
+            GoogleMap gm = fragmentMap.getmMap();
+            LatLng point = new LatLng(lon, lat);
+            gm.addMarker(new MarkerOptions()
+                    .position(point)
+                    .title("    " ));
+            gm.moveCamera(CameraUpdateFactory.newLatLngZoom(point, 13.0f));        }
+    };
+}

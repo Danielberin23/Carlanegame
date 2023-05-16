@@ -87,7 +87,7 @@
             android:rotation="270"
             android:scaleX="0.8"
             android:scaleY="0.9"
-            android:visibility="visible"
+            android:visibility="invisible"
             app:srcCompat="@drawable/brighgreen_car" />
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -100,7 +100,7 @@
             android:rotation="270"
             android:scaleX="0.8"
             android:scaleY="0.9"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:srcCompat="@drawable/brighgreen_car" />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/green_car_centerR"
@@ -169,35 +169,35 @@
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp">
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/main_IMG_Barrier_11"
+        android:id="@+id/main_IMG_Barrier_1"
         android:layout_width="100dp"
         android:layout_height="90dp"
         app:srcCompat="@drawable/barrier"
         android:visibility="invisible"
         android:layout_weight="1"/>
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/main_IMG_Barrier_21"
+        android:id="@+id/main_IMG_Barrier_2"
         android:layout_width="100dp"
         android:layout_height="90dp"
         app:srcCompat="@drawable/barrier"
         android:visibility="invisible"
         android:layout_weight="1"/>
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/main_IMG_Barrier_31"
+        android:id="@+id/main_IMG_Barrier_3"
         android:layout_width="100dp"
         android:layout_height="90dp"
         app:srcCompat="@drawable/barrier"
         android:visibility="invisible"
         android:layout_weight="1"/>
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/main_IMG_Barrier_41"
+        android:id="@+id/main_IMG_Barrier_4"
         android:layout_width="100dp"
         android:layout_height="90dp"
         app:srcCompat="@drawable/barrier"
         android:visibility="invisible"
         android:layout_weight="1"/>
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/main_IMG_Barrier_51"
+        android:id="@+id/main_IMG_Barrier_5"
         android:layout_width="100dp"
         android:layout_height="90dp"
         app:srcCompat="@drawable/barrier"
@@ -212,35 +212,35 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_12"
+            android:id="@+id/main_IMG_Barrier_6"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_22"
+            android:id="@+id/main_IMG_Barrier_7"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_32"
+            android:id="@+id/main_IMG_Barrier_8"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_42"
+            android:id="@+id/main_IMG_Barrier_9"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_52"
+            android:id="@+id/main_IMG_Barrier_10"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
@@ -255,6 +255,20 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
         <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_Barrier_11"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:visibility="invisible"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_Barrier_12"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:visibility="invisible"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_Barrier_13"
             android:layout_width="100dp"
             android:layout_height="90dp"
@@ -262,28 +276,14 @@
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_23"
+            android:id="@+id/main_IMG_Barrier_14"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_33"
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            app:srcCompat="@drawable/barrier"
-            android:visibility="invisible"
-            android:layout_weight="1"/>
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_43"
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            app:srcCompat="@drawable/barrier"
-            android:visibility="invisible"
-            android:layout_weight="1"/>
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_53"
+            android:id="@+id/main_IMG_Barrier_15"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
@@ -299,35 +299,35 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_14"
+            android:id="@+id/main_IMG_Barrier_16"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_24"
+            android:id="@+id/main_IMG_Barrier_17"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_34"
+            android:id="@+id/main_IMG_Barrier_18"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_44"
+            android:id="@+id/main_IMG_Barrier_19"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_54"
+            android:id="@+id/main_IMG_Barrier_20"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
@@ -342,7 +342,28 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_15"
+            android:id="@+id/main_IMG_Barrier_21"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:visibility="invisible"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_Barrier_22"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:visibility="invisible"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_Barrier_23"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:visibility="invisible"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_Barrier_24"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
@@ -350,27 +371,6 @@
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_Barrier_25"
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            app:srcCompat="@drawable/barrier"
-            android:visibility="invisible"
-            android:layout_weight="1"/>
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_35"
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            app:srcCompat="@drawable/barrier"
-            android:visibility="invisible"
-            android:layout_weight="1"/>
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_45"
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            app:srcCompat="@drawable/barrier"
-            android:visibility="invisible"
-            android:layout_weight="1"/>
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_55"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
@@ -385,13 +385,6 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_16"
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            app:srcCompat="@drawable/barrier"
-            android:visibility="invisible"
-            android:layout_weight="1"/>
-        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_Barrier_26"
             android:layout_width="100dp"
             android:layout_height="90dp"
@@ -399,21 +392,28 @@
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_36"
+            android:id="@+id/main_IMG_Barrier_27"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_46"
+            android:id="@+id/main_IMG_Barrier_28"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
             android:visibility="invisible"
             android:layout_weight="1"/>
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_Barrier_56"
+            android:id="@+id/main_IMG_Barrier_29"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            app:srcCompat="@drawable/barrier"
+            android:visibility="invisible"
+            android:layout_weight="1"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_Barrier_30"
             android:layout_width="100dp"
             android:layout_height="90dp"
             app:srcCompat="@drawable/barrier"
